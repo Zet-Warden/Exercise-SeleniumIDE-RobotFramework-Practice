@@ -9,7 +9,7 @@ Library         SeleniumLibrary
 *** Test Cases ***
 Valid Login
     # open browser
-    Open Browser    https://www.saucedemo.com/  headlesschrome
+    Open Browser    https://www.saucedemo.com/  chrome
     # set window size
     Maximize Browser Window
     Set Selenium Speed  0
