@@ -24,3 +24,22 @@ Valid Login
     Element Text Should Be  class:title     PRODUCTS
     # close browser
     [Teardown]  Close Browser
+
+Locked Out Login    
+    # open browser
+    Open Browser    https://www.saucedemo.com/  chrome
+    # set window size
+    Maximize Browser Window
+    Set Selenium Speed  0
+    # check if in login page
+    Page Should Contain Element     login-button
+    # input username
+    Input Text  user-name   locked_out_user
+    # input password
+    Input Password  password    secret_sauce
+    # click login button
+    Click Button    login-button
+    # Error message
+    Element Test Should Be      data-test:error     Epic sadface: Sorry, this user has been locked out.
+    # close browser
+    [Teardown]  Close Browser
